@@ -1,4 +1,4 @@
-yfinance>=0.2.31b2
+
 
 
 import streamlit as st
