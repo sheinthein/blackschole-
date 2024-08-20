@@ -1,17 +1,6 @@
 
-from pathlib import Path
 
-import appdirs as ad
 
-CACHE_DIR = ".cache"
-
-# Force appdirs to say that the cache dir is .cache
-ad.user_cache_dir = lambda *args: CACHE_DIR
-
-# Create the cache dir if it doesn't exist
-Path(CACHE_DIR).mkdir(exist_ok=True)
-
-import yfinance as yf
 import streamlit as st
 import yfinance as yf
 import numpy as np
@@ -19,6 +8,7 @@ import scipy.stats as si
 import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
+import yfinance as yf
 
 # Fetch stock data
 def fetch_stock_data(ticker_symbol, period='1y', interval='1d'):
